@@ -1,0 +1,9 @@
+com\cqupt\java\ai\langchain4j\EmbeddingTest.class
+com\cqupt\java\ai\langchain4j\LLMTest.class
+com\cqupt\java\ai\langchain4j\PromptTest.class
+com\cqupt\java\ai\langchain4j\AIServiceTest.class
+com\cqupt\java\ai\langchain4j\AppointmentServiceTest.class
+com\cqupt\java\ai\langchain4j\ChatMemoryTest.class
+com\cqupt\java\ai\langchain4j\RAGTest.class
+com\cqupt\java\ai\langchain4j\MongoCrudTest.class
+com\cqupt\java\ai\langchain4j\ToolsTest.class
