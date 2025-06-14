@@ -55,10 +55,10 @@ public class EmbeddingTest {
         Embedding queryEmbedding = embeddingModel.embed("你最喜欢的运动是什么？").content();
         //创建搜索请求对象
         EmbeddingSearchRequest searchRequest = EmbeddingSearchRequest.builder()
-                .queryEmbedding(queryEmbedding)
-                .maxResults(1) //匹配最相似的一条记录
-                .minScore(0.8) //设置最小匹配得分
-                .build();
+                                                .queryEmbedding(queryEmbedding)
+                                                .maxResults(1) //匹配最相似的一条记录
+                                                .minScore(0.8) //设置最小匹配得分
+                                                .build();
         //根据搜索请求 searchRequest 在向量存储中进行相似度搜索
         EmbeddingSearchResult<TextSegment> searchResult = embeddingStore.search(searchRequest);
         //searchResult.matches()：获取搜索结果中的匹配项列表。
