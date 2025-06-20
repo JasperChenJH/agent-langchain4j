@@ -26,12 +26,12 @@ public class WebConfig implements WebMvcConfigurer {
         registry.addInterceptor(tokenInterceptor)
                 .addPathPatterns("/**")
                 .excludePathPatterns(
+//                        "/xiaozhi/chat",
                         "/login",
                         "/doc.html",
                         "/webjars/**",
                         "/swagger-resources/**",
                         "/v3/api-docs/**"
                 );
-
     }
 }

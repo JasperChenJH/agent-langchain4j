@@ -1,7 +1,9 @@
 package com.cqupt.java.ai.langchain4j.tokenInterceptor;
 
+import com.cqupt.java.ai.langchain4j.context.BaseContext;
 import com.cqupt.java.ai.langchain4j.entity.User;
 import com.cqupt.java.ai.langchain4j.jwt.JWTUtils;
+import io.jsonwebtoken.Claims;
 import jakarta.annotation.Resource;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -31,7 +33,11 @@ public class TokenInterceptor implements HandlerInterceptor {
         try {
             log.info("解析令牌,判断是否合法");
             user.setToken(jwt);
-            JWTUtils.parse(user);
+            //JWTUtils.parse(user) 执行时 没有抛出异常
+            // （如签名校验失败、Token 过期、格式错误等都会抛异常
+            Claims claims = JWTUtils.parse(user);
+            Object id = claims.get("id");// 能走到这一步，说明解析没抛异常
+            BaseContext.setCurrentUserId(Long.parseLong(id.toString()));
         }catch (Exception e){
             log.info("解析令牌失败,令牌不合法");
             response.setStatus(401);
