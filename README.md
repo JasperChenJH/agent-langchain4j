@@ -1,6 +1,6 @@
 # agent-langchain4j
 
-> 基于 Spring Boot 3 + LangChain4j 的智能医疗交流与预约挂号系统后端示例项目。
+> 基于 Spring Boot 3 + LangChain4j 的智能医疗交流与预约挂号系统后端项目。
 
 本项目以“智能医疗问答 + 预约挂号 Agent”为核心场景，接入大语言模型、流式输出、对话记忆、RAG 知识检索、工具调用、用户登录认证、MySQL 业务数据存储和 MongoDB 对话记忆存储，适合作为学习 LangChain4j Agent 开发、医疗问答系统后端设计和 RAG 应用落地的参考项目。
 
